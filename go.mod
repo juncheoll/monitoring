@@ -1,4 +1,4 @@
-module monitoring
+module github.com/juncheoll/monitoring
 
 go 1.21.5
 

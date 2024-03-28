@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"monitoring/network"
+	"github.com/juncheoll/monitoring/network"
 
 	"github.com/shirou/gopsutil/process"
 )
