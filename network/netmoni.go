@@ -37,10 +37,10 @@ func PrintNetworkInfo() error {
 	for _, io := range ioCounters {
 		fmt.Printf("Interface: %s\n", io.Name)
 
-		bSent := prevInfo[io.Name]["bSent"] - io.BytesSent
-		bRecv := prevInfo[io.Name]["bRecv"] - io.BytesRecv
-		pSent := prevInfo[io.Name]["pSent"] - io.PacketsSent
-		pRecv := prevInfo[io.Name]["pRecv"] - io.PacketsRecv
+		bSent := io.BytesSent - prevInfo[io.Name]["bSent"]
+		bRecv := io.BytesRecv - prevInfo[io.Name]["bRecv"]
+		pSent := io.PacketsSent - prevInfo[io.Name]["pSent"]
+		pRecv := io.PacketsRecv - prevInfo[io.Name]["pRecv"]
 		fmt.Printf("Bytes Sent: %d, Bytes Recv: %d\n", bSent, bRecv)
 		fmt.Printf("Packets Sent: %d, Packets Recv: %d\n", pSent, pRecv)
 
